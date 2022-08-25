@@ -58,7 +58,7 @@ class ClienteWSECDH {
                 var respuesta: Mensaje? = null
                 men.setNoises(peticionEncriptada)
                 val response = cliente.post(
-                    "http://192.168.1.79:8080/api/v2/decifraMensaje",
+                    "http://direccionIp:8080/api/v2/decifraMensaje",
                     "3118AB86-5707-4422-A89B-BCD3F00898AC",
                     gson.toJson(men)
                 )
@@ -91,7 +91,7 @@ class ClienteWSECDH {
             peticion.setKey(ourPk.toString())
             Log.e("Peticion:",gson.toJson(peticion).toString())
             val response = cliente.post(
-                "http://192.168.1.79:8080/api/v2/setKey",
+                "http://DireccionIp:8080/api/v2/setKey",
                 "3118AB86-5707-4422-A89B-BCD3F00898AC",
                 gson.toJson(peticion).toString()
             )
